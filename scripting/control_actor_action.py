@@ -1,4 +1,6 @@
 from scripting.action import Action
+import constants
+from shared.point import Point
 
 class ControlActorAction(Action):
     """Detects player input. 
