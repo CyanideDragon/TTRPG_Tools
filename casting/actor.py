@@ -24,18 +24,14 @@ class Actor:
     def get_text(self):
         return self._text
 
-    def get_velocity(self):
-        return self._velocity
+    def get_font_type(self):
+        return self._font_type
+
+    def get_font_weight(self):
+        return self._font_weight
     
-    def move_next(self, max_x, max_y, actor):
-        if actor == 'player':
-            x = (self._position.get_x() + self._velocity.get_x()) % max_x
-            y = (self._position.get_y() + self._velocity.get_y()) % max_y
-            self._position = Point(x, y)
-        else:
-            x = (self._position.get_x() + self._velocity.get_x())
-            y = (self._position.get_y() + self._velocity.get_y())
-            self._position = Point(x, y)
+    def get_image(self):
+        return self._image
 
     def set_color(self, color):
         self._color = color
@@ -49,5 +45,11 @@ class Actor:
     def set_text(self, text):
         self._text = text
 
-    def set_velocity(self, velocity):
-        self._velocity = velocity
+    def set_font_type(self, font_type):
+        self._font_type = font_type
+
+    def set_font_weight(self, font_weight):
+        self._font_weight = font_weight
+
+    def set_image(self, image):
+        self._image = image
