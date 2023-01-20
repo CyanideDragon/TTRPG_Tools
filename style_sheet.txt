@@ -11,3 +11,4 @@ code documentation should be in three double quotes. These are for understanding
 development documentation should use the pound symbol (#) instead of triple quotes. This documentation is remiders to self or others about changes or notes for later.
 Please remove them when they are no longer needed.
 
+When writing documentation, write above the line that you are referring to.
