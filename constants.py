@@ -1,6 +1,5 @@
-from TTRPG_Tools.shared.color import Color
+from shared.color import Color
 
-PROGRAM_VERSION = "V_0.4.10"
 COLUMNS = 40
 ROWS = 20
 CELL_SIZE = 15
@@ -8,7 +7,7 @@ MAX_X = 1920
 MAX_Y = 1080
 FRAME_RATE = 15
 FONT_SIZE = 15
-CAPTION = "DMTools"
+CAPTION = 'TTRPG Tools'
 WHITE = Color(255, 255, 255)
 RED = Color(255, 0, 0)
 YELLOW = Color(255, 255, 0)

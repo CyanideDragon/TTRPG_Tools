@@ -1,0 +1,13 @@
+Refer to this sheet when trying to determine how to style the program so we maintain consistency.
+
+classes should be named in CamelCase
+
+All other items, ie. files, variables, functions, should be in snake_case.
+
+when writing a string, use single quotes. In ttrpg games there are many quotations, it will make using escapes less necessary when we use single quotes.
+
+code documentation should be in three double quotes. These are for understanding what the code is doing. Use script.py under scripting for an example. This is also useful for pseudo code
+
+development documentation should use the pound symbol (#) instead of triple quotes. This documentation is remiders to self or others about changes or notes for later.
+Please remove them when they are no longer needed.
+
