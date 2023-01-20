@@ -1,0 +1,2 @@
+class VideoService:
+    pass
