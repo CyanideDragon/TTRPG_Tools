@@ -15,11 +15,11 @@ class Frame(wx.Frame):
         super(Frame, self).__init__(parent,  
         title=title,                         
         size=(960, 540),                     
-        style=wx.MAXIMIZE_BOX |              
-        wx.MINIMIZE_BOX |                    
-        wx.RESIZE_BORDER |                   
-        wx.SYSTEM_MENU |                     
-        wx.CAPTION |	                     
+        style=wx.MAXIMIZE_BOX | 
+        wx.MINIMIZE_BOX | 
+        wx.RESIZE_BORDER | 
+        wx.SYSTEM_MENU | 
+        wx.CAPTION | 
         wx.CLOSE_BOX)                        
         
         self.InitUI()
