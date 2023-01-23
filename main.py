@@ -35,7 +35,7 @@ def main():
     video_service = VideoService() 
     mouse_service = MouseService()
 
-    scrip = Sctript()
+    script = Sctript()
 
     #Make sure we know what we need to pass into all the scripts
     button_action = ButtonAction()
@@ -51,10 +51,26 @@ def main():
     playable_character_action = PlableCharacterAction()
     token_action = TokenAction()
 
+
+
     #add script executions here
 
+    script.add_action("input", button_action)
+    script.add_action("input", character_action)
+    script.add_action("input", control_actor_action)
+    script.add_action("input", drop_down_action)
+    script.add_action("input", input_box_action)
+    script.add_action("input", map_action)
+    script.add_action("input", menu_action)
+    script.add_action("input", move_actor_action)
+    script.add_action("input", non_playable_character_action)
+    script.add_action("input", playable_character_action)
+    script.add_action("input", token_action)
+    script.add_action("output", draw_actor_action)
+
+
     director = Director(video_service)
-    director.start_game(cast, scrip)
+    director.start_game(cast, script)
 
 
 
