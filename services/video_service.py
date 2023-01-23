@@ -2,7 +2,13 @@ import wx
 
 from casting.menu import Menu
 
-class VideoService(wx.Frame):
+class VideoService(wx.App):
+    def __init__(self):
+        # makes a frame around the app using the class
+        wx.App.__init__(self)
+        self.frame = Frame(None, title='Sudoku')
+
+class Frame(wx.Frame):
     def __init__(self, parent, title):
         """accesses the parent, in this case none as it is the frame; 
         sets the title to the one passed it
@@ -12,7 +18,7 @@ class VideoService(wx.Frame):
         gives a simple system menu;
         gives the space for the above window functions; 
         draws the close window box"""
-        super().__init__(parent,  
+        super(Frame, self).__init__(parent,  
         title=title,                         
         size=(960, 540),                     
         style=wx.MAXIMIZE_BOX | 
@@ -22,9 +28,5 @@ class VideoService(wx.Frame):
         wx.CAPTION | 
         wx.CLOSE_BOX)
         
-        self.InitUI()
-
-    def InitUI(self):
-        """ Sets the app to fullscreen upon opening """
         self.Centre()
         Menu()
