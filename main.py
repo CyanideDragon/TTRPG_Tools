@@ -69,7 +69,7 @@ def main():
     # script.add_action("output", draw_actor_action)
 
 
-    director = Director(video_service)
+    director = Director()
     director.start_game(cast, script)
 
 

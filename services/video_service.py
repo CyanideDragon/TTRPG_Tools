@@ -6,7 +6,8 @@ class VideoService(wx.App):
     def __init__(self):
         # makes a frame around the app using the class
         wx.App.__init__(self)
-        self.frame = Frame(None, title='Sudoku')
+        # self.frame = Frame(None, title='Sudoku')
+        # self.frame.Show(True)
 
 class Frame(wx.Frame):
     def __init__(self, parent, title):
@@ -27,6 +28,13 @@ class Frame(wx.Frame):
         wx.SYSTEM_MENU | 
         wx.CAPTION | 
         wx.CLOSE_BOX)
-        
+
+        # self.call()
         self.Centre()
-        Menu()
+        self.menu = Menu()
+        # self.menu.player_menu()
+        
+    def call(self):
+        self.Centre()
+        self.menu = Menu()
+        self.menu.player_menu()
