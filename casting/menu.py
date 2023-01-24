@@ -20,8 +20,8 @@ class Menu(wx.Frame):
 
     def player_menu(self):
         """Creates and adds menu items"""
-        # self.menuBar = wx.MenuBar()
-        # self.fileMenu = wx.Menu()
+        self.menuBar = wx.MenuBar()
+        self.fileMenu = wx.Menu()
         self.actionMenu = wx.Menu()     
         self.abilitiesMenu = wx.Menu()
         self.statsMenu = wx.Menu()

@@ -31,10 +31,44 @@ class Frame(wx.Frame):
 
         # self.call()
         self.Centre()
-        self.menu = Menu()
+        self.player_menu()
         # self.menu.player_menu()
         
-    def call(self):
-        self.Centre()
-        self.menu = Menu()
-        self.menu.player_menu()
+    # def call(self):
+    #     self.Centre()
+    #     self.menu = Menu()
+    #     self.menu.player_menu()
+
+    def player_menu(self):
+        """Creates and adds menu items"""
+        self.menuBar = wx.MenuBar()
+        self.fileMenu = wx.Menu()
+        self.characterMenu = wx.Menu()
+        self.actionMenu = wx.Menu()     
+        self.abilitiesMenu = wx.Menu()
+        self.statsMenu = wx.Menu()
+        self.item = wx.MenuItem(self.fileMenu, 0, '&Check', helpString ="Check Help")
+        self.menuBar.Append(self.fileMenu, '&File')
+        self.menuBar.Insert(1, self.actionMenu, '&Actions')
+        self.menuBar.Insert(1, self.abilitiesMenu, '&Abilities')
+        self.menuBar.Insert(1, self.statsMenu, '&Stats')
+        self.menuBar.Insert(1, self.characterMenu, '&Characters')
+
+        """Adds to the character menu"""
+        characters = wx.Menu()
+        characters.Append(wx.ID_ANY, 'Larry')
+        characters.Append(wx.ID_ANY, 'Curly')
+        characters.Append(wx.ID_ANY, 'Moe')
+        self.characterMenu.AppendMenu(wx.ID_ANY, '&Characters', characters)
+
+        self.fileQuit = wx.MenuItem(self.fileMenu, wx.ID_EXIT, '&Quit\tCtrl+Q') 
+        self.Bind(wx.EVT_MENU, self.OnQuit, self.fileQuit)
+        self.fileMenu.Append(self.fileQuit)
+
+        """Draws the menu Bar"""
+        self.SetMenuBar(self.menuBar)
+        self.Show(True)
+        
+
+    def OnQuit(self, e):
+        self.Close(True)
