@@ -1,5 +1,6 @@
 from services.video_service import VideoService
 from services.video_service import Frame
+import wx
 
 class Director:
     """A person who directs the game. 
@@ -25,6 +26,16 @@ class Director:
             cast (Cast): The cast of actors.
             script (Script): The script of actions.
         """
+        self._is_window_open = True
+
+        Frame.Bind(wx.EVT_CLOSE, self.on_close)
+
+        while self._is_window_open == True:
+            self._execute_actions('input', cast, script)
+            self._execute_actions('update', cast, script)
+            self._execute_actions('output', cast, script)
+
+
         # self._video_service.open_window()
         # while self._video_service.is_window_open():
         #     self._execute_actions('input', cast, script)
@@ -48,3 +59,6 @@ class Director:
         actions = script.get_actions(group)    
         for action in actions:
             action.execute(cast, script)          
+    
+    # def on_close(self):
+    #     self._is_window_open = False
