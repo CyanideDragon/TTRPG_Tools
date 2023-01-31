@@ -28,12 +28,14 @@ class Director:
         """
         self._is_window_open = True
 
-        Frame.Bind(wx.EVT_CLOSE, self.on_close)
+        # self.frame = Frame(None, 'Director Frame')
 
-        while self._is_window_open == True:
-            self._execute_actions('input', cast, script)
-            self._execute_actions('update', cast, script)
-            self._execute_actions('output', cast, script)
+        # self.frame.Bind(wx.EVT_CLOSE, self.on_close, self.frame)
+
+        # while self._is_window_open == True:
+        #     self._execute_actions('input', cast, script)
+        #     self._execute_actions('update', cast, script)
+        #     self._execute_actions('output', cast, script)
 
 
         # self._video_service.open_window()
@@ -60,5 +62,5 @@ class Director:
         for action in actions:
             action.execute(cast, script)          
     
-    # def on_close(self):
-    #     self._is_window_open = False
+    def on_close(self, e):
+        self.Close(True)

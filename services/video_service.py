@@ -1,6 +1,7 @@
 import wx
 
 from casting.menu import Menu
+from casting.button import Button
 
 class VideoService(wx.App):
     def __init__(self):
@@ -31,8 +32,11 @@ class Frame(wx.Frame):
 
         # self.call()
         self.Centre()
+        self.choose_screen()
         self.player_menu()
         # self.menu.player_menu()
+
+        
         
     # def call(self):
     #     self.Centre()
@@ -69,6 +73,15 @@ class Frame(wx.Frame):
         self.SetMenuBar(self.menuBar)
         self.Show(True)
         
+    def choose_screen(self):
+        """Creates the DM / Player select buttons"""
+        main_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        player_button = wx.Button(self, label='Player', pos=(600,150), size=(150,150))
+        DM_button = wx.Button(self, label='Dungeon Master', pos=(160,150), size=(150,150))
+        main_sizer.Add(DM_button, 1, wx.Left, 0)
+        main_sizer.Add(player_button, 2, wx.Right, 0)
+        
+
 
     def OnQuit(self, e):
         self.Close(True)
