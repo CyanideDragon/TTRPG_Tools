@@ -80,6 +80,46 @@ class Frame(wx.Frame):
         """Hides the screen select buttons"""
         self.player_button.Hide()
         self.DM_button.Hide()
+
+        """Creates and adds menu items"""
+        self.playerMenu = wx.Menu()
+        self.NPCMenu = wx.Menu()     
+        self.menuBar.Insert(1, self.playerMenu, '&Players')
+        self.menuBar.Insert(2, self.NPCMenu, '&NPC\'s')
+
+        """Adds Players and selections to them"""
+        player1 = wx.Menu()
+        player1.Append(wx.ID_ANY, 'Character Sheet')
+        player1.Append(wx.ID_ANY, 'Spells Sheet')
+        player1.Append(wx.ID_ANY, 'Background')
+        self.playerMenu.AppendMenu(wx.ID_ANY, '&Jesse', player1)
+
+        player2 = wx.Menu()
+        player2.Append(wx.ID_ANY, 'Character Sheet')
+        player2.Append(wx.ID_ANY, 'Spells Sheet')
+        player2.Append(wx.ID_ANY, 'Background')
+        self.playerMenu.AppendMenu(wx.ID_ANY, '&Jared', player2)
+
+        player3 = wx.Menu()
+        player3.Append(wx.ID_ANY, 'Character Sheet')
+        player3.Append(wx.ID_ANY, 'Spells Sheet')
+        player3.Append(wx.ID_ANY, 'Background')
+        self.playerMenu.AppendMenu(wx.ID_ANY, '&Jensen', player3)
+
+        player4= wx.Menu()
+        player4.Append(wx.ID_ANY, 'Character Sheet')
+        player4.Append(wx.ID_ANY, 'Spells Sheet')
+        player4.Append(wx.ID_ANY, 'Background')
+        self.playerMenu.AppendMenu(wx.ID_ANY, '&James', player4)
+
+        """Adds to the NPC's Menu menu"""
+        self.NPCMenu.Append(wx.ID_ANY, 'Strahd')
+
+        """Draws the menu Bar"""
+        self.SetMenuBar(self.menuBar)
+        self.Show(True)
+
+
         
     """Creates the buttons that """
     def choose_screen(self):
