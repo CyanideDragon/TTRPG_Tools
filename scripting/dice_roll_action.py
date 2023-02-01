@@ -8,7 +8,7 @@ class DiceRollAction(Action):
     def __init__(self):
         pass
 
-    def execute(self, die_size, roll_modifier, min = -9999, max = 9999):
+    def execute(self, die_size, roll_modifier, minimum = -9999, maximum = 9999):
         """executes the dice roller action calls. min and max are not required to call and so ahve been added last."""
 
         """Check byt die size, have random pick a number, add the modifier, then check to make sure it is within the parameters.
@@ -17,10 +17,10 @@ class DiceRollAction(Action):
 
         raw_outcome = random.randint(1, die_size)
         modified_outcome = raw_outcome + roll_modifier
-        if modified_outcome > max:
-            modified_outcome = max
-        elif modified_outcome < min:
-            modified_outcome = min
+        if modified_outcome > maximum:
+            modified_outcome = maximum
+        elif modified_outcome < minimum:
+            modified_outcome = minimum
 
         out_list.append(raw_outcome)
         out_list.append(roll_modifier)
