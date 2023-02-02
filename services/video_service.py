@@ -3,12 +3,12 @@ import wx
 from casting.menu import Menu
 from casting.button import Button
 
+"""Initiates the App"""
 class VideoService(wx.App):
     def __init__(self):
-        # makes a frame around the app using the class
         wx.App.__init__(self)
-        # self.frame = Frame(None, title='Sudoku')
-        # self.frame.Show(True)
+        
+        
 
 class Frame(wx.Frame):
     def __init__(self, parent, title):
@@ -30,6 +30,7 @@ class Frame(wx.Frame):
         wx.CAPTION | 
         wx.CLOSE_BOX)
 
+        self.button = Button
         """Centers the app on the screen"""
         self.Centre()
         self.initial_menu(wx.EVT_BUTTON)
@@ -75,6 +76,9 @@ class Frame(wx.Frame):
         self.SetMenuBar(self.menuBar)
         self.Show(True)
 
+        """Calls the button class to draw the dice rolling options"""
+        self.button.diceButtons(self)
+
     """Creates a menu with all of the options for players"""
     def DM_menu(self, event):
         """Hides the screen select buttons"""
@@ -119,8 +123,6 @@ class Frame(wx.Frame):
         self.SetMenuBar(self.menuBar)
         self.Show(True)
 
-
-        
     """Creates the buttons that """
     def choose_screen(self):
         """Creates the DM / Player select buttons"""
