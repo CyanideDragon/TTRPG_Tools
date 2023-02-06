@@ -1,0 +1,8 @@
+A list of inventory items to be used in the program. Not all items will have the same effects or abilities. Items should be labeled with the following: {Name, weight, type ie. weapon/rmor/adventuring gear, item modifiers, damage die, magic effects.} Not all areas will have values.
+arming sword, 5, weapon, one-handed, melee, 1d6
+torch, 1, adventuring gear
+tinderbox, 0.5, adventuring gear
+great hammer, 15, weapon, heavy two-handed special_0, melee, 1d12
++1 mace, 7, weapon, one-handed, 1d6, melee, +1
+sleeping bag, 3, adventuring gear
+longbow, 4, weapon, ranged ammunition, 120/300, 1d8

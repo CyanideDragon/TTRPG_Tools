@@ -16,3 +16,12 @@ CYAN = Color(0,255,255)
 VIOLET = Color(230,230,250)
 ORANGE = Color(250,215,0)
 GOLD = Color (255,215,0)
+
+#dictionary
+ITEM_MODIFIER_CODES = {"one-handed" : "This item is used in one hand.",
+                       "two-handed" : "This item is used with two hands.",
+                       "Heavy" : "This item is too heavy and unwieldy for creatures smaller than medium size.",
+                       "special_0" : "This weapon gets +1 to attack against enemies carrying shields or heavy armor."}
+
+#dicitonary
+MAGIC_ITEM_CODES = {}
