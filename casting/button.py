@@ -6,6 +6,7 @@ import constants
 from casting.actor import Actor
 from shared.point import Point
 from shared.color import Color
+from casting.menu import Menu
 
 class Button(wx.Button):
     def __init__(self):
@@ -55,5 +56,22 @@ class Button(wx.Button):
         # img = wx.IMAGE_QUALITY_HIGH
         # self.d20_button.SetBitmap(wx.Bitmap(img, wx.BITMAP_TYPE_PNG))
 
-        mainSizer.Add(self.d20_button, 0, wx.Center, 0)        
+        mainSizer.Add(self.d20_button, 0, wx.Center, 0)    
+
+    def choose_screen(self):
+        """Creates the DM / Player select buttons"""
+        font = wx.Font(18, wx.MODERN, wx.NORMAL, wx.NORMAL)
+
+        """Creates the DM / Player select buttons"""
+        main_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        self.player_button = wx.Button(self, label='Player', pos=(600,150), size=(200,200))
+        self.DM_button = wx.Button(self, label='Dungeon\nMaster', pos=(160,150), size=(200,200))
+        self.player_button.SetFont(font)
+        self.DM_button.SetFont(font)
+        main_sizer.Add(self.DM_button, 1, wx.Left, 0)
+        main_sizer.Add(self.player_button, 2, wx.Right, 0)
+
+        """Makes it so the buttons will react when clicked"""
+        self.Bind(wx.EVT_BUTTON, self.player_menu, self.player_button)
+        self.Bind(wx.EVT_BUTTON, self.DM_menu, self.DM_button)   
         
