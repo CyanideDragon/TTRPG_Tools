@@ -22,8 +22,11 @@ class DoWeaponItemAction:
             #add more if statements for other weapon mods that change damage or die sizes
 
         for _ in number_of_dice:
-            damage_result += DiceRollAction.execute(die_size, player_modifier)
+            roller_return = DiceRollAction.execute(die_size)
+            damage_result += roller_return[2]
         
+        damage_result += player_modifier
+
         print(damage_result)
         
 

@@ -8,7 +8,7 @@ class DiceRollAction(Action):
     def __init__(self):
         pass
 
-    def execute(self, die_size, roll_modifier, minimum = -9999, maximum = 9999):
+    def execute(self, die_size, roll_modifier = 0, minimum = -9999, maximum = 9999):
         """executes the dice roller action calls. min and max are not required to call and so ahve been added last."""
 
         """Check byt die size, have random pick a number, add the modifier, then check to make sure it is within the parameters.
