@@ -6,6 +6,7 @@ from shared.point import Point
 from shared.color import Color
 
 
+
 class Menu(wx.Frame):
     
     def __init__(self):
@@ -56,7 +57,7 @@ class Menu(wx.Frame):
         self.Show(True)
 
         """Calls the button class to draw the dice rolling options"""
-        self.button.diceButtons(self)
+        # self.button.diceButtons()
 
     def DM_menu(self):
         """Hides the screen select buttons"""
