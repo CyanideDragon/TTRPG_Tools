@@ -49,9 +49,6 @@ class Frame(wx.Frame):
     def player_menu(self, event):
         self.Menu.player_menu(self)
 
-        # """Calls the button class to draw the dice rolling options"""
-        # self.button.diceButtons(self)
-
     """Creates a menu with all of the options for players"""
     def DM_menu(self, event):
         self.Menu.DM_menu(self)

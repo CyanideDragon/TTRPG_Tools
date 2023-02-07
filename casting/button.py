@@ -17,6 +17,7 @@ class Button(wx.Button):
         """Creates the custom, d100, d20, d12, d10, d8, d6, and d4 buttons"""
         font = wx.Font(12, wx.MODERN, wx.NORMAL, wx.NORMAL)
         mainSizer = wx.BoxSizer(wx.HORIZONTAL)
+        
         self.d100_button = wx.Button(self, label='D100', pos=(5,425), size=(50,50))
         self.d100_button.SetFont(font)
 
