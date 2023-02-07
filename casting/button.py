@@ -47,19 +47,20 @@ class Button(wx.Button):
         mainSizer.Add(d6_button, 0, wx.Center, 0)
         mainSizer.Add(d4_button, 0, wx.Center, 0)
 
-        # button = Button
-        # d100_button.Bind(wx.EVT_BUTTON, d100_button.SetLabel(button.onRollDice(self)))
+        """Roll dice on click"""
+        button = Button
+        d100_button.Bind(wx.EVT_BUTTON, d100_button.SetLabel(button.onRollDice(self, 100)))
+        d20_button.Bind(wx.EVT_BUTTON, d20_button.SetLabel(button.onRollDice(self, 20)))
+        d12_button.Bind(wx.EVT_BUTTON, d12_button.SetLabel(button.onRollDice(self, 12)))
+        d10_button.Bind(wx.EVT_BUTTON, d10_button.SetLabel(button.onRollDice(self, 10)))
+        d8_button.Bind(wx.EVT_BUTTON, d8_button.SetLabel(button.onRollDice(self, 8)))
+        d6_button.Bind(wx.EVT_BUTTON, d6_button.SetLabel(button.onRollDice(self, 6)))
+        d4_button.Bind(wx.EVT_BUTTON, d4_button.SetLabel(button.onRollDice(self, 4)))
 
-        # roller = DiceRollAction()
-        # total = roller.execute(100)
-        # total_string = str(total[2])
-        # total_Button = wx.Button(self, label=total_string, pos=(100,100), size=(50,50))
-        # mainsizer = wx.BoxSizer(wx.HORIZONTAL)
-        # mainsizer.Add(total_Button, 0, wx.Center, 0)
-    
-    def onRollDice(self):
+    def onRollDice(self, num):
+        """Get the random number from the Roll Dice class"""
         roller = DiceRollAction()
-        total = roller.execute(100)
+        total = roller.execute(num)
         # total_string = str(total[2])
         # total_Button = wx.Button(self, label=total_string, pos=(100,100), size=(50,50))
         # mainsizer = wx.BoxSizer(wx.HORIZONTAL)
