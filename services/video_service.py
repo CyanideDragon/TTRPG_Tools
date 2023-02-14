@@ -2,6 +2,7 @@ import wx
 
 from casting.menu import Menu
 from casting.button import Button
+from casting.stats_sheet import StatSheet
 from scripting.dice_roll_action import DiceRollAction
 
 """Initiates the App"""
@@ -49,6 +50,8 @@ class Frame(wx.Frame):
         self.Menu.player_menu(self)
         button = Button
         button.diceButtons(self)
+        stat_sheet = StatSheet
+        stat_sheet.display_sheet(self)
       
     """Creates a menu with all of the options for players"""
     def DM_menu(self, event):
