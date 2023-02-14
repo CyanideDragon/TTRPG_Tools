@@ -130,8 +130,13 @@ class Button(wx.Button):
 
         """Get the random number from the Roll Dice class"""
         roller = DiceRollAction()
-        total = roller.execute(dice_size)
-        # mainsizer = wx.BoxSizer(wx.HORIZONTAL)
-        # mainsizer.Add(total_Button, 0, wx.Center, 0) 
+        total = [0, 0, 0]
+        
+        while dice_amount > 0:
+            temp = roller.execute(dice_size)
+            total[0] += temp[0]
+            total[2] += temp[2]
+            dice_amount -= 1
+        
         return str(total[2])      
          
