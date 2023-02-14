@@ -50,7 +50,7 @@ class Frame(wx.Frame):
         self.Menu.player_menu(self)
         button = Button
         button.diceButtons(self)
-        stat_sheet = StatSheet
+        stat_sheet = StatSheet()
         stat_sheet.display_sheet(self)
       
     """Creates a menu with all of the options for players"""
