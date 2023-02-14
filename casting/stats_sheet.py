@@ -23,17 +23,17 @@ class StatSheet:
         self.cha : int = 0
         # self.parent = parent
 
-    def __create_box__(self, xPos:int, yPos: int, width: int, height: int, name: str):
+    def __create_box__(self, xPos:int, yPos: int, width: int, height: int):
         position = wx.Point(xPos, yPos)
         size = wx.Size(width, height)
-        stats = wx.StaticBox(self, wx.ID_ANY, label="", pos=position, size=size, name=name)
+        stats = wx.StaticBox(self, wx.ID_ANY, label="", pos=position, size=size)
     
     def display_sheet(self):
         SCREENWIDTH : int = 960
         SCREENHEIGHT : int = 450
         stats = StatSheet
-        stats.__create_box__(self, (SCREENWIDTH // 3) * 2, 10,
-            (SCREENWIDTH // 3) - 20, SCREENHEIGHT - 20, "Character Stats")
+        stats.__create_box__(self, (SCREENWIDTH // 3) * 2, 5,
+            (SCREENWIDTH // 3) - 25, SCREENHEIGHT + 10)
         pass
 
     pass
