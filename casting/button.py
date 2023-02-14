@@ -62,47 +62,47 @@ class Button(wx.Button):
 
         """Creates the buttons to add dice"""
         plus_100_Button = wx.Button(self, label='+', pos=(40,425), size=(15,25))
-        plus_100_Button.Bind(wx.EVT_BUTTON, text_100.SetValue(str(int(text_100.GetValue()) + 1)))
+        plus_100_Button.Bind(wx.EVT_BUTTON, lambda event: text_100.SetValue(str(int(text_100.GetValue()) + 1)))
         
         plus_20_Button = wx.Button(self, label='+', pos=(90,425), size=(15,25))
-        plus_20_Button.Bind(wx.EVT_BUTTON, text_20.SetValue(str(int(text_20.GetValue()) + 1)))
+        plus_20_Button.Bind(wx.EVT_BUTTON, lambda event: text_20.SetValue(str(int(text_20.GetValue()) + 1)))
 
         plus_12_Button = wx.Button(self, label='+', pos=(140,425), size=(15,25))
-        plus_12_Button.Bind(wx.EVT_BUTTON, text_12.SetValue(str(int(text_12.GetValue()) + 1)))
+        plus_12_Button.Bind(wx.EVT_BUTTON, lambda event: text_12.SetValue(str(int(text_12.GetValue()) + 1)))
 
         plus_10_Button = wx.Button(self, label='+', pos=(190,425), size=(15,25))
-        plus_10_Button.Bind(wx.EVT_BUTTON, text_10.SetValue(str(int(text_10.GetValue()) + 1)))
+        plus_10_Button.Bind(wx.EVT_BUTTON, lambda event: text_10.SetValue(str(int(text_10.GetValue()) + 1)))
 
         plus_8_Button = wx.Button(self, label='+', pos=(240,425), size=(15,25))
-        plus_8_Button.Bind(wx.EVT_BUTTON, text_8.SetValue(str(int(text_8.GetValue()) + 1)))
+        plus_8_Button.Bind(wx.EVT_BUTTON, lambda event: text_8.SetValue(str(int(text_8.GetValue()) + 1)))
 
         plus_6_Button = wx.Button(self, label='+', pos=(290,425), size=(15,25))
-        plus_6_Button.Bind(wx.EVT_BUTTON, text_6.SetValue(str(int(text_6.GetValue()) + 1)))
+        plus_6_Button.Bind(wx.EVT_BUTTON, lambda event: text_6.SetValue(str(int(text_6.GetValue()) + 1)))
 
         plus_4_Button = wx.Button(self, label='+', pos=(340,425), size=(15,25))
-        plus_4_Button.Bind(wx.EVT_BUTTON, text_4.SetValue(str(int(text_4.GetValue()) + 1)))
+        plus_4_Button.Bind(wx.EVT_BUTTON, lambda event: text_4.SetValue(str(int(text_4.GetValue()) + 1)))
 
         """Creats the buttons to subtract dice"""
         minus_100_Button = wx.Button(self, label='-', pos=(5,425), size=(15,25))
-        minus_100_Button.Bind(wx.EVT_BUTTON, text_100.SetValue(str(int(text_100.GetValue()) - 1)))
+        minus_100_Button.Bind(wx.EVT_BUTTON, lambda event: text_100.SetValue(str(int(text_100.GetValue()) - 1)))
         
         minus_20_Button = wx.Button(self, label='-', pos=(55,425), size=(15,25))
-        minus_20_Button.Bind(wx.EVT_BUTTON, text_20.SetValue(str(int(text_20.GetValue()) - 1)))
+        minus_20_Button.Bind(wx.EVT_BUTTON, lambda event: text_20.SetValue(str(int(text_20.GetValue()) - 1)))
         
         minus_12_Button = wx.Button(self, label='-', pos=(105,425), size=(15,25))
-        minus_12_Button.Bind(wx.EVT_BUTTON, text_12.SetValue(str(int(text_12.GetValue()) - 1)))
+        minus_12_Button.Bind(wx.EVT_BUTTON, lambda event: text_12.SetValue(str(int(text_12.GetValue()) - 1)))
         
         minus_10_Button = wx.Button(self, label='-', pos=(155,425), size=(15,25))
-        minus_10_Button.Bind(wx.EVT_BUTTON, text_10.SetValue(str(int(text_10.GetValue()) - 1)))
+        minus_10_Button.Bind(wx.EVT_BUTTON, lambda event: text_10.SetValue(str(int(text_10.GetValue()) - 1)))
         
         minus_8_Button = wx.Button(self, label='-', pos=(205,425), size=(15,25))
-        minus_8_Button.Bind(wx.EVT_BUTTON, text_8.SetValue(str(int(text_8.GetValue()) - 1)))
+        minus_8_Button.Bind(wx.EVT_BUTTON, lambda event: text_8.SetValue(str(int(text_8.GetValue()) - 1)))
         
         minus_6_Button = wx.Button(self, label='-', pos=(255,425), size=(15,25))
-        minus_6_Button.Bind(wx.EVT_BUTTON, text_6.SetValue(str(int(text_6.GetValue()) - 1)))
+        minus_6_Button.Bind(wx.EVT_BUTTON, lambda event: text_6.SetValue(str(int(text_6.GetValue()) - 1)))
         
         minus_4_Button = wx.Button(self, label='-', pos=(305,425), size=(15,25))
-        minus_4_Button.Bind(wx.EVT_BUTTON, text_4.SetValue(str(int(text_4.GetValue()) - 1)))
+        minus_4_Button.Bind(wx.EVT_BUTTON, lambda event: text_4.SetValue(str(int(text_4.GetValue()) - 1)))
         
         """Adding buttons to hold the totals of the rolls"""
         total_100_Button = wx.Button(self, label='total', pos=(5,450), size=(50,25))
@@ -115,17 +115,17 @@ class Button(wx.Button):
 
         """Roll dice on click"""
         button = Button
-        d100_button.Bind(wx.EVT_BUTTON, total_100_Button.SetLabel(button.onRollDice(self, 100, int(text_100.GetValue()))))
-        d20_button.Bind(wx.EVT_BUTTON, total_20_Button.SetLabel(button.onRollDice(self, 20, int(text_20.GetValue()))))
-        d12_button.Bind(wx.EVT_BUTTON, total_12_Button.SetLabel(button.onRollDice(self, 12, int(text_12.GetValue()))))
-        d10_button.Bind(wx.EVT_BUTTON, total_10_Button.SetLabel(button.onRollDice(self, 10, int(text_10.GetValue()))))
-        d8_button.Bind(wx.EVT_BUTTON, total_8_Button.SetLabel(button.onRollDice(self, 8, int(text_8.GetValue()))))
-        d6_button.Bind(wx.EVT_BUTTON, total_6_Button.SetLabel(button.onRollDice(self, 6, int(text_6.GetValue()))))
-        d4_button.Bind(wx.EVT_BUTTON, total_4_Button.SetLabel(button.onRollDice(self, 4, int(text_4.GetValue()))))
+        d100_button.Bind(wx.EVT_BUTTON, lambda event: total_100_Button.SetLabel(button.onRollDice(self, 100, int(text_100.GetValue()))))
+        d20_button.Bind(wx.EVT_BUTTON, lambda event: total_20_Button.SetLabel(button.onRollDice(self, 20, int(text_20.GetValue()))))
+        d12_button.Bind(wx.EVT_BUTTON, lambda event: total_12_Button.SetLabel(button.onRollDice(self, 12, int(text_12.GetValue()))))
+        d10_button.Bind(wx.EVT_BUTTON, lambda event: total_10_Button.SetLabel(button.onRollDice(self, 10, int(text_10.GetValue()))))
+        d8_button.Bind(wx.EVT_BUTTON, lambda event: total_8_Button.SetLabel(button.onRollDice(self, 8, int(text_8.GetValue()))))
+        d6_button.Bind(wx.EVT_BUTTON, lambda event: total_6_Button.SetLabel(button.onRollDice(self, 6, int(text_6.GetValue()))))
+        d4_button.Bind(wx.EVT_BUTTON, lambda event: total_4_Button.SetLabel(button.onRollDice(self, 4, int(text_4.GetValue()))))
 
     def onRollDice(self, dice_size, dice_amount):
         """Check if no dice are being rolled"""
-        if dice_amount == 0:
+        if dice_amount <= 0:
             return str(0)
 
         """Get the random number from the Roll Dice class"""
