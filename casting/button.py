@@ -115,18 +115,22 @@ class Button(wx.Button):
 
         """Roll dice on click"""
         button = Button
-        d100_button.Bind(wx.EVT_BUTTON, total_100_Button.SetLabel(button.onRollDice(self, 100)))
-        d20_button.Bind(wx.EVT_BUTTON, total_20_Button.SetLabel(button.onRollDice(self, 20)))
-        d12_button.Bind(wx.EVT_BUTTON, total_12_Button.SetLabel(button.onRollDice(self, 12)))
-        d10_button.Bind(wx.EVT_BUTTON, total_10_Button.SetLabel(button.onRollDice(self, 10)))
-        d8_button.Bind(wx.EVT_BUTTON, total_8_Button.SetLabel(button.onRollDice(self, 8)))
-        d6_button.Bind(wx.EVT_BUTTON, total_6_Button.SetLabel(button.onRollDice(self, 6)))
-        d4_button.Bind(wx.EVT_BUTTON, total_4_Button.SetLabel(button.onRollDice(self, 4)))
+        d100_button.Bind(wx.EVT_BUTTON, total_100_Button.SetLabel(button.onRollDice(self, 100, int(text_100.GetValue()))))
+        d20_button.Bind(wx.EVT_BUTTON, total_20_Button.SetLabel(button.onRollDice(self, 20, int(text_20.GetValue()))))
+        d12_button.Bind(wx.EVT_BUTTON, total_12_Button.SetLabel(button.onRollDice(self, 12, int(text_12.GetValue()))))
+        d10_button.Bind(wx.EVT_BUTTON, total_10_Button.SetLabel(button.onRollDice(self, 10, int(text_10.GetValue()))))
+        d8_button.Bind(wx.EVT_BUTTON, total_8_Button.SetLabel(button.onRollDice(self, 8, int(text_8.GetValue()))))
+        d6_button.Bind(wx.EVT_BUTTON, total_6_Button.SetLabel(button.onRollDice(self, 6, int(text_6.GetValue()))))
+        d4_button.Bind(wx.EVT_BUTTON, total_4_Button.SetLabel(button.onRollDice(self, 4, int(text_4.GetValue()))))
 
-    def onRollDice(self, num):
+    def onRollDice(self, dice_size, dice_amount):
+        """Check if no dice are being rolled"""
+        if dice_amount == 0:
+            return str(0)
+
         """Get the random number from the Roll Dice class"""
         roller = DiceRollAction()
-        total = roller.execute(num)
+        total = roller.execute(dice_size)
         # mainsizer = wx.BoxSizer(wx.HORIZONTAL)
         # mainsizer.Add(total_Button, 0, wx.Center, 0) 
         return str(total[2])      
