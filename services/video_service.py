@@ -2,6 +2,8 @@ import wx
 
 from casting.menu import Menu
 from casting.button import Button
+from casting.action_bar import ActionBar
+from casting.map import Map
 from casting.stats_sheet import StatSheet
 from scripting.dice_roll_action import DiceRollAction
 
@@ -47,10 +49,18 @@ class Frame(wx.Frame):
     """Creates a menu with all of the options for players"""
     def player_menu(self, event):
         self.Menu.player_menu(self)
+        
         button = Button
         button.diceButtons(self)
+        
         stat_sheet = StatSheet()
         stat_sheet.display_sheet(self)
+        
+        action_bar = ActionBar
+        action_bar.create_bar(self)
+        
+        map = Map
+        map.display_map(self)
       
     """Creates a menu with all of the options for players"""
     def DM_menu(self, event):
