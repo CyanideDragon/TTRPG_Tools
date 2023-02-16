@@ -14,6 +14,7 @@ class ActionBar:
         super(wx.Panel, self).__init__()
 
     def create_bar(self):
+        """Creates the action bar with nothing in it"""
         action_bar = wx.StaticBox(self, wx.ID_ANY, size=(625,108), pos=(375, 658))
 
     

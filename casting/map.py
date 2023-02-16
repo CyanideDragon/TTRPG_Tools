@@ -6,7 +6,8 @@ class Map:
         pass
 
     def display_map(self):
-        image_file = 'TTRPG_Tools\casting\map.png'
-        bmp1 = wx.Image(image_file, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-        self.bitmap1 = wx.StaticBitmap(self, -1, bmp1, (5,5))
-        #map = wx.StaticBox(self, wx.ID_ANY, size=(100,100), pos=(5,5))
+        """Creates the image for the map and displays it on the screen"""
+        map_file = 'TTRPG_Tools\casting\map.png'
+        map = wx.Image(map_file, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+        self.bitmap1 = wx.StaticBitmap(self, -1, map, (5,5))
+        map_border = wx.StaticBox(self, wx.ID_ANY, size=(996,650), pos=(5,5))
