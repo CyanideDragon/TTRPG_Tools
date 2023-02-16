@@ -22,7 +22,7 @@ class Frame(wx.Frame):
         draws the close window box"""
         super(Frame, self).__init__(parent,  
         title=title,                         
-        size=(960, 540),                     
+        size=(1600, 825),                     
         style=wx.MAXIMIZE_BOX | 
         wx.MINIMIZE_BOX | 
         wx.RESIZE_BORDER | 
@@ -31,7 +31,6 @@ class Frame(wx.Frame):
         wx.CLOSE_BOX)
 
         """Creates the button and menu classes"""
-        
         self.Menu = Menu
 
         """Centers the app on the screen"""
@@ -64,8 +63,8 @@ class Frame(wx.Frame):
 
         """Creates the DM / Player select buttons"""
         main_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.player_button = wx.Button(self, label='Player', pos=(600,150), size=(200,200))
-        self.DM_button = wx.Button(self, label='Dungeon\nMaster', pos=(160,150), size=(200,200))
+        self.player_button = wx.Button(self, label='Player', pos=(900,300), size=(200,200))
+        self.DM_button = wx.Button(self, label='Dungeon\nMaster', pos=(450,300), size=(200,200))
         self.player_button.SetFont(font)
         self.DM_button.SetFont(font)
         main_sizer.Add(self.DM_button, 1, wx.Left, 0)
