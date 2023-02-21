@@ -1,4 +1,4 @@
-A list of inventory items to be used in the program. Not all items will have the same effects or abilities. Items should be labeled with the following: {Name, weight, type ie. weapon/rmor/adventuring gear, item modifiers, damage die, magic effects.} Not all areas will have values.
+A list of inventory items to be used in the program. Not all items will have the same effects or abilities. Items should be labeled with the following: {Name, weight, type ie. weapon/armor/adventuring gear, item modifiers, damage die, magic effects.} Not all areas will have values.
 arming sword, 5, weapon, one-handed, melee, 1d6
 torch, 1, adventuring gear
 tinderbox, 0.5, adventuring gear
