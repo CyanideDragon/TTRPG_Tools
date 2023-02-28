@@ -19,7 +19,7 @@ from scripting.move_actor_action import MoveActorsAction
 from scripting.non_playable_character_action import NonPlayableCharacterAction
 from scripting.playable_character_action import PlableCharacterAction
 from scripting.token_action import TokenAction
-from scripting.create_inventory_items import CreateInventoryItems
+# from scripting.create_weapon_items import CreateInventoryItems - this was deleted. this line will be deleted later
 from scripting.do_weapon_item_action import DoWeaponItemAction
 #Add Actors as necessary if they need to be called on initialization below cast
 from casting.cast import Cast

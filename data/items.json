@@ -1,0 +1,142 @@
+{
+    "_comments": "This file holds data reguarding all possible items that will be used in the base version of the TTRP Tools program. All items will be formatted based on their main type, only including relevant data.",
+    "_comments1": "There is no need to contain None elements, instead logic will be used on item type to determine which funtion call to use on constructing the item into program memory. armors will use armor category to determine DEX modifiers",
+    "weapons": [
+        {
+            "name": "Arming Sword",
+            "base_cost": "10 gp",
+            "weight": 5,
+            "modifiers":[
+                "One-Handed"
+            ],
+            "range": "melee",
+            "damage": "1d6",
+            "damage_type": "slashing"
+        },
+        {
+            "name": "Great Hammer",
+            "base_cost": "50 gp",
+            "weight": 15,
+            "modifiers": [
+                "heavy",
+                "two-handed"
+            ],
+            "range": "melee",
+            "damage": "1d12",
+            "damage_type": "bludgeoning"
+        },
+        {
+            "name": "+1 Mace",
+            "base_cost": "500 gp",
+            "weight": 7,
+            "modifiers": [
+                "One-Handed"
+            ],
+            "range": "melee",
+            "damage": "1d6",
+            "damage_type": "magical bludgeoning",
+            "magic_effect": "+1"
+        },
+        {
+            "name": "Scimitar",
+            "base_cost": "25 gp",
+            "weight": 3,
+            "modifiers": [
+                "Finesse",
+                "Light"
+            ],
+            "range": "melee",
+            "damage": "1d6",
+            "damage_type": "bludgeoning"
+        },
+        {
+            "name": "Longbow",
+            "base_cost": "50 gp",
+            "weight": 2,
+            "modifiers":[
+                "ammunition",
+                "heavy",
+                "two-handed"
+            ],
+            "range": "150/600",
+            "damage": "1d8",
+            "damage_type": "Piercing"
+        }
+    ],
+
+
+
+
+
+    "armor": [
+        {
+            "name": "Padded",
+            "armor_category": "Light",
+            "base_cost": "5 gp",
+            "weight": 8,
+            "armor_class": 11,
+            "strenght_requirement": 0,
+            "stealth_disadvantage": true
+        },
+        {
+            "name": "Chain Shirt",
+            "armor_category": "Medium",
+            "base_cost":"50 gp",
+            "weight": 20,
+            "armor_class": 13,
+            "strenght_requirement": 0,
+            "stealth_disadvantage": false
+        },
+        {
+            "name": "Splint",
+            "armor_category": "Heavy",
+            "base_cost": "200 gp",
+            "weight": 55,
+            "armor_class": 17,
+            "strenght_requirement": 15,
+            "stealth_disadvantage": true
+        },
+        {
+            "name": "+2 Breastplate",
+            "armor_category": "Medium",
+            "base_cost": "50000 gp",
+            "weight": 20,
+            "armor_class": 14,
+            "strenght_requirement": 0,
+            "stealth_disadvantage": false,
+            "magic_effect": "+2"            
+        }
+    ],
+
+
+
+
+    "adventuring_gear":[
+        {
+            "name": "Torch",
+            "base_cost": "1 cp",
+            "weight": 1,
+            "damage": 1,
+            "damage_type": "fire",
+            "item_description": "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet."
+        },
+        {
+            "name": "Tinderbox",
+            "base_cost": "5 sp",
+            "weight": 1,
+            "item_description": "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch -- or anything else with abundant, exposed fuel -- takes an action. Lighting any other fire takes 1 minute."
+        },
+        {
+            "name": "Sleeping Bag",
+            "base_cost": "1 gp",
+            "weight": 7,
+            "item_description": "You never know where you're going to sleep, and a bedroll helps you get better sleep in a hayloft or on the cold ground. A bedroll consists of bedding and a blanket thin enough to be rolled up and tied. In an emergency, it can double as a stretcher."
+        },
+        {
+            "name": "backpack",
+            "base_cost": "2 gp",
+            "weight": 5,
+            "item_description": " A backpack is a leather pack carried on the back, typically with straps to secure it. A backpack can hold 1 cubic foot/ 30 pounds of gear.\n You can also strap items, such as a bedroll or a coil of rope, to the outside of a backpack."
+        }
+    ]
+}
