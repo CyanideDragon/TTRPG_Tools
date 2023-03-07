@@ -25,3 +25,13 @@ ITEM_MODIFIER_CODES = {"one-handed" : "This item is used in one hand.",
 
 #dicitonary
 MAGIC_ITEM_CODES = {}
+
+
+
+
+
+
+
+
+
+
