@@ -68,7 +68,7 @@
 
 
 
-    "armor": [
+    "armors": [
         {
             "name": "Padded",
             "armor_category": "Light",
