@@ -34,10 +34,16 @@ class StatSheet():
         stats.SetLabelText(f"Player: {self.player_name}")
         hp = wx.StaticBox(stats, wx.ID_ANY, label="HP", pos=(20, 20), size=(100, 50))
         temp_hp = wx.StaticBox(stats, wx.ID_ANY, label="Temp HP", pos=(130, 20), size=(100, 50))
-        armor_C = wx.StaticBox(stats, wx.ID_ANY, label="Armor Class", pos=(20, 120), size=(100, 50))
-        initiative = wx.StaticBox(stats, wx.ID_ANY, label="Initiative", pos=(20, 170), size=(100, 50))
-        speed = wx.StaticBox(stats, wx.ID_ANY, label="speed", pos=(20, 220), size=(100, 50))
-        speed = wx.StaticBox(stats, wx.ID_ANY, label="speed", pos=(20, 270), size=(100, 50))
+        armor_C = wx.StaticBox(stats, wx.ID_ANY, label="Armor Class", pos=(130, 70), size=(100, 50))
+        initiative = wx.StaticBox(stats, wx.ID_ANY, label="Initiative", pos=(20, 70), size=(100, 50))
+        speed = wx.StaticBox(stats, wx.ID_ANY, label="speed", pos=(240, 70), size=(100, 50))
+        strength = wx.StaticBox(stats, wx.ID_ANY, label="Strength", pos=(20, 220), size=(100, 50))
+        dexterity = wx.StaticBox(stats, wx.ID_ANY, label="Dexterity", pos=(20, 270), size=(100, 50))
+        constitution = wx.StaticBox(stats, wx.ID_ANY, label="Constitution", pos=(20, 320), size=(100, 50))
+        intelligence = wx.StaticBox(stats, wx.ID_ANY, label="Intelligence", pos=(20, 370), size=(100, 50))
+        wisdom = wx.StaticBox(stats, wx.ID_ANY, label="Wisdom", pos=(20, 420), size=(100, 50))
+        charisma = wx.StaticBox(stats, wx.ID_ANY, label="Charisma", pos=(20, 470), size=(100, 50))
+        inventory = wx.StaticBox(stats, wx.ID_ANY, label="Inventory", pos=(0, 550), size=(size[0], size[1] - 550))
         
 
         
