@@ -44,6 +44,17 @@ class StatSheet():
         wisdom = wx.StaticBox(stats, wx.ID_ANY, label="Wisdom", pos=(round(width / 30.75), round(height / (height / 420))), size=(round(width / 6.15), round(height / 19.2)))
         charisma = wx.StaticBox(stats, wx.ID_ANY, label="Charisma", pos=(round(width / 30.75), round(height / (height / 470))), size=(round(width / 6.15), round(height / 19.2)))
         inventory = wx.StaticBox(stats, wx.ID_ANY, label="Inventory", pos=(0, round(height / (height / 550))), size=(round(width), round(height - (height / (height / 550)))))
+        wx.StaticText(hp, label=f"{self.hp}", pos=(15, 15))
+        wx.StaticText(temp_hp, label=f"{self.temp_hp}", pos=(15, 15))
+        wx.StaticText(armor_C, label=f"{self.armor_class}", pos=(15, 15))
+        wx.StaticText(initiative, label=f"{self.init}", pos=(15, 15))
+        wx.StaticText(speed, label=f"{self.speed}", pos=(15, 15))
+        wx.StaticText(strength, label=f"{self.str}", pos=(15, 15))
+        wx.StaticText(dexterity, label=f"{self.dex}", pos=(15, 15))
+        wx.StaticText(constitution, label=f"{self.con}", pos=(15, 15))
+        wx.StaticText(intelligence, label=f"{self.int}", pos=(15, 15))
+        wx.StaticText(wisdom, label=f"{self.wis}", pos=(15, 15))
+        wx.StaticText(charisma, label=f"{self.cha}", pos=(15, 15))
         
 
         
