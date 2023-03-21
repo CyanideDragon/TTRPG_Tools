@@ -32,18 +32,18 @@ class StatSheet():
         size = wx.Size(width, height)
         stats = wx.StaticBox(window, wx.ID_ANY, label="", pos=position, size=size)
         stats.SetLabelText(f"Player: {self.player_name}")
-        hp = wx.StaticBox(stats, wx.ID_ANY, label="HP", pos=(20, 20), size=(100, 50))
-        temp_hp = wx.StaticBox(stats, wx.ID_ANY, label="Temp HP", pos=(130, 20), size=(100, 50))
-        armor_C = wx.StaticBox(stats, wx.ID_ANY, label="Armor Class", pos=(130, 70), size=(100, 50))
-        initiative = wx.StaticBox(stats, wx.ID_ANY, label="Initiative", pos=(20, 70), size=(100, 50))
-        speed = wx.StaticBox(stats, wx.ID_ANY, label="speed", pos=(240, 70), size=(100, 50))
-        strength = wx.StaticBox(stats, wx.ID_ANY, label="Strength", pos=(20, 220), size=(100, 50))
-        dexterity = wx.StaticBox(stats, wx.ID_ANY, label="Dexterity", pos=(20, 270), size=(100, 50))
-        constitution = wx.StaticBox(stats, wx.ID_ANY, label="Constitution", pos=(20, 320), size=(100, 50))
-        intelligence = wx.StaticBox(stats, wx.ID_ANY, label="Intelligence", pos=(20, 370), size=(100, 50))
-        wisdom = wx.StaticBox(stats, wx.ID_ANY, label="Wisdom", pos=(20, 420), size=(100, 50))
-        charisma = wx.StaticBox(stats, wx.ID_ANY, label="Charisma", pos=(20, 470), size=(100, 50))
-        inventory = wx.StaticBox(stats, wx.ID_ANY, label="Inventory", pos=(0, 550), size=(size[0], size[1] - 550))
+        hp = wx.StaticBox(stats, wx.ID_ANY, label="HP", pos=(round(width / 30.75), round(height / 48)), size=(round(width / 6.15), round(height / 19.2)))
+        temp_hp = wx.StaticBox(stats, wx.ID_ANY, label="Temp HP", pos=(round(width / 4.7), round(height / 48)), size=(round(width / 6.15), round(height / 19.2)))
+        armor_C = wx.StaticBox(stats, wx.ID_ANY, label="Armor Class", pos=(round(width / 4.7), round(height / 13.71)), size=(round(width / 6.15), round(height / 19.2)))
+        initiative = wx.StaticBox(stats, wx.ID_ANY, label="Initiative", pos=(round(width / 30.75), round(height / 13.71)), size=(round(width / 6.15), round(height / 19.2)))
+        speed = wx.StaticBox(stats, wx.ID_ANY, label="speed", pos=(round(width / 2.5625), round(height / 13.71)), size=(round(width / 6.5), round(height / 19.2)))
+        strength = wx.StaticBox(stats, wx.ID_ANY, label="Strength", pos=(round(width / 30.75), round(height / 4.36)), size=(round(width / 6.15), round(height / 19.2)))
+        dexterity = wx.StaticBox(stats, wx.ID_ANY, label="Dexterity", pos=(round(width / 30.75), round(height / (height/270))), size=(round(width / 6.15), round(height / 19.2)))
+        constitution = wx.StaticBox(stats, wx.ID_ANY, label="Constitution", pos=(round(width / 30.75), round(height / 3)), size=(round(width / 6.15), round(height / 19.2)))
+        intelligence = wx.StaticBox(stats, wx.ID_ANY, label="Intelligence", pos=(round(width / 30.75), round(height / (height/ 370))), size=(round(width / 6.15), round(height / 19.2)))
+        wisdom = wx.StaticBox(stats, wx.ID_ANY, label="Wisdom", pos=(round(width / 30.75), round(height / (height / 420))), size=(round(width / 6.15), round(height / 19.2)))
+        charisma = wx.StaticBox(stats, wx.ID_ANY, label="Charisma", pos=(round(width / 30.75), round(height / (height / 470))), size=(round(width / 6.15), round(height / 19.2)))
+        inventory = wx.StaticBox(stats, wx.ID_ANY, label="Inventory", pos=(0, round(height / (height / 550))), size=(round(width), round(height - (height / (height / 550)))))
         
 
         
@@ -56,7 +56,7 @@ class StatSheet():
         SCREENHEIGHT : int = wx.DisplaySize()[1]
         stats = StatSheet()
         stats.__create_box__(window=window, xPos=(SCREENWIDTH // 3) * 2, yPos=10,
-            width=(SCREENWIDTH // 3) - 25, height=SCREENHEIGHT - 120)
+            width=round((SCREENWIDTH // 3) - (SCREENWIDTH / 76.8)), height=round(SCREENHEIGHT - (SCREENHEIGHT / 9)))
         
 
     
