@@ -18,10 +18,16 @@ class Button(wx.Button):
         font = wx.Font(12, wx.MODERN, wx.NORMAL, wx.NORMAL)
         
         d100_button = wx.Button(self, label='D100', pos=(5,665), size=(50,50))
+        # d100_image = wx.Bitmap('images\d20button.png')
         d100_button.SetFont(font)
+        # d100_button.SetBitmap(d100_image)
 
         d20_button = wx.Button(self, label='D20', pos=(55,665), size=(50,50))
+        d20_image = wx.Image('images\d20button.png')
+        d20_image = d20_image.Scale(50, 50, wx.IMAGE_QUALITY_HIGH)
+        d20_image = wx.BitmapFromImage(d20_image)
         d20_button.SetFont(font)
+        #d20_button.SetBitmap(d20_image)
 
         d12_button = wx.Button(self, label='D12', pos=(105,665), size=(50,50))
         d12_button.SetFont(font)
